@@ -514,6 +514,13 @@ export default {
                 room.at = false
             }
         })
+        ipcRenderer.on('markRoomUnread', (_, roomId) => {
+            const room = this.rooms.find(e => e.roomId === roomId)
+            if (room) {
+                room.unreadCount = 1
+                room.at = false
+            }
+        })
         ipcRenderer.on('updatePriority', (_, p) => this.priority = p)
         ipcRenderer.on('setAllRooms', (_, p) => this.rooms = p)
         ipcRenderer.on('setAllChatGroups', (_, p) => this.chatGroups = p || [])

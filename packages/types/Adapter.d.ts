@@ -38,6 +38,8 @@ export default interface Adapter {
 
     clearRoomUnread(roomId: number): any
 
+    markRoomUnread(roomId: number): void
+
     getUnreadRooms(): Promise<Room[]>
 
     reportRead(messageId: string): any

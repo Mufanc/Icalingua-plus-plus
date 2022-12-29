@@ -44,6 +44,7 @@ export const {
     getFriendsFallback,
     clearCurrentRoomUnread,
     clearRoomUnread,
+    markRoomUnread,
     setRoomPriority,
     setRoomAutoDownload,
     setRoomAutoDownloadPath,

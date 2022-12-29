@@ -108,6 +108,9 @@ export default {
     clearRoomUnread(roomId: number) {
         sendToMainWindow('clearRoomUnread', roomId)
     },
+    markRoomUnread(roomId: number) {
+        sendToMainWindow('markRoomUnread', roomId)
+    },
     setAllRooms(rooms: Room[]) {
         sendToMainWindow('setAllRooms', rooms)
     },
