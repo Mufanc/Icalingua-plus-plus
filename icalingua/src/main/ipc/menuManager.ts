@@ -197,10 +197,12 @@ const buildRoomMenu = (room: Room): Menu => {
         },
     ])
     if (room.unreadCount === 0) {
-        menu.append(new MenuItem({
-            'label': '标为未读',
-            click: () => markRoomUnread(room.roomId),
-        }))
+        menu.append(
+            new MenuItem({
+                label: '标为未读',
+                click: () => markRoomUnread(room.roomId),
+            }),
+        )
     }
     const webApps = new Menu()
     if (room.roomId < 0) {

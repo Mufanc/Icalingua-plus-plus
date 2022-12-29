@@ -401,7 +401,7 @@ const adapter: Adapter = {
         updateTrayIcon()
     },
     markRoomUnread(roomId: number) {
-        if (!socket) return;
+        if (!socket) return
         ui.markRoomUnread(roomId)
         const room = rooms.find((e) => e.roomId === roomId)
         if (room) {
